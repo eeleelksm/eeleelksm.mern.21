@@ -24,13 +24,12 @@ const typeDefs = gql`
 	}
 
 	input bookInput {
-    bookId: String
+		bookId: String
 		authors: [String]
 		description: String
 		title: String
 		image: String
 		link: String
-	}
 	}
 
 	type Mutation {
@@ -40,10 +39,10 @@ const typeDefs = gql`
 		removeBook(bookId: ID!): User
 	}
 
-  type Auth {
-    token: ID!
-    user: User
-  }
+	type Auth {
+		token: ID!
+		user: User
+	}
 `;
 
 module.exports = typeDefs;
