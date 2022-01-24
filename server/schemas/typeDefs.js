@@ -4,9 +4,6 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
 	type Query {
 		me: User
-		users: [User]
-		user(username: String!): User
-		userById(_id: ID!): User
 	}
 
 	type User {
@@ -39,7 +36,7 @@ const typeDefs = gql`
 		login(email: String!, password: String!): Auth
 		addUser(username: String!, email: String!, password: String!): Auth
 		saveBook(input: bookInput!): User
-		removeBook(bookId: ID!): User
+		removeBook(bookId: String!): User
 	}
 
 	type Auth {
